@@ -16,8 +16,8 @@
   "dependencies": {
     "@micro-package/axios": "1.0.6",
     "@micro-package/container": "1.0.6",
-    "@micro-package/express": "1.0.5",
-    "@micro-package/storyteller": "1.0.7",
+    "@micro-package/express": "1.0.6",
+    "@micro-package/storyteller": "1.0.8",
     "axios": "0.27.2"
   },
   "devDependencies": {
