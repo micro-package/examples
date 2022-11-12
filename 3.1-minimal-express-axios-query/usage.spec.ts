@@ -12,7 +12,7 @@ describe("example 3.1", () => {
       assert: testFramework.createStep({
         name: StepName.stepAssert,
         handler: async (valueObject) => {
-          const executions = valueObject.expressGetExecution({
+          const executions = valueObject.expressGetExecutions({
             endpointName: EndpointName.googleMainPage,
             paths: ["request.query", "response.statusCode"],
           });

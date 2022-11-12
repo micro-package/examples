@@ -13,7 +13,7 @@ describe("example 2.2", () => {
         name: StepName.stepAssert,
         handler: async (valueObject) => {
           const mock = valueObject.expressGetMock({ endpointName: EndpointName.googleMainPage });
-          const executions = valueObject.expressGetExecution({
+          const executions = valueObject.expressGetExecutions({
             endpointName: EndpointName.googleMainPage,
             paths: ["response.statusCode"],
           });

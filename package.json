@@ -9,8 +9,7 @@
   },
   "scripts": {
     "test-lint": "./node_modules/.bin/eslint -c ./eslint.json --ext .ts ./",
-    "test-types": "./node_modules/.bin/tsc --project ./tsconfig.json",
-    "cleanup": "rm -rf .dev && rm -rf .dist && rm -rf node_modules"
+    "test-types": "./node_modules/.bin/tsc --project ./tsconfig.json"
   },
   "author": "Łukasz Klejszta",
   "license": "UNLICENSED",
