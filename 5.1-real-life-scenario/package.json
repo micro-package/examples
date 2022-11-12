@@ -24,8 +24,8 @@
   "devDependencies": {
     "@micro-package/axios": "1.0.6",
     "@micro-package/container": "1.0.6",
-    "@micro-package/express": "1.0.5",
-    "@micro-package/storyteller": "1.0.7",
+    "@micro-package/express": "1.0.6",
+    "@micro-package/storyteller": "1.0.8",
     "@micro-package/typeorm": "^1.0.8",
     "@types/express": "4.17.13",
     "@types/jest": "29.2.2",
