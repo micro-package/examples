@@ -4,10 +4,10 @@ import { arrangeAgifyEndpoint, arrangeClearAgeNamePairTable } from "./framework/
 import { actNameToAgeBatchEndpoint } from "./framework/act";
 import { ApiEndpointName, AppEndpointName } from "./framework/definitions";
 
-describe("feature/nameAge", () => {
+describe("User needs to know what is the *age* for specific *name*", () => {
   const mockedAgifyResponses = [1, 2, 3, 4, 5];
   it(
-    "feature/nameAge/simpleNameToAge",
+    "happy path",
     testFramework.createScenario({
       arrange: testFramework.composeSection(
         arrangeClearAgeNamePairTable(),
@@ -38,7 +38,7 @@ describe("feature/nameAge", () => {
 
   it.skip(
     //? for some reason when 2 `it` are in single file, there is a problem with missing defaultStates in storyteller plugin :(
-    "feature/nameAge/simpleNameToAge2",
+    "2User needs to know what is the *age* for specific *name*",
     testFramework.createScenario({
       arrange: arrangeAgifyEndpoint({ age: mockedAgifyResponses }),
       act: actNameToAgeBatchEndpoint({ names: ["Tom", "Bob", "Anna", "Hannah", "Alice"] }),
