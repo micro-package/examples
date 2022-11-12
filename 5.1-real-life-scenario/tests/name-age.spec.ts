@@ -37,7 +37,7 @@ describe("User needs to know what is the *age* for specific *name*", () => {
   );
 });
 describe("error with second it in the same file", () => {
-  it.skip(
+  it(
     //? for some reason when 2 `it` are in single file, there is a problem with missing defaultStates in storyteller plugin :(
     "2User needs to know what is the *age* for specific *name*",
     testFramework.createScenario({
