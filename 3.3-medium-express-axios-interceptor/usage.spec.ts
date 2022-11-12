@@ -32,7 +32,7 @@ describe("example 3.3", () => {
         name: StepName.stepAssert,
         handler: async (valueObject) => {
           server.close();
-          const executions = valueObject.expressGetExecution({
+          const executions = valueObject.expressGetExecutions({
             endpointName: EndpointName.googleMainPage,
             //? there is currently no way to read responded data ( is it needed? )
             paths: ["response.statusCode"],

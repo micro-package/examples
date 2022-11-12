@@ -17,7 +17,7 @@ describe("User needs to know what is the *age* for specific *name*", () => {
       assert: testFramework.createStep({
         name: StepName.assert,
         handler: async (valueObject) => {
-          const agifyRequests = valueObject.expressGetExecution({ endpointName: ApiEndpointName.getAge });
+          const agifyRequests = valueObject.expressGetExecutions({ endpointName: ApiEndpointName.getAge });
           const nameToAgeResponses = valueObject.axiosGetResponses({ endpointName: AppEndpointName.nameToAge });
 
           //? check is what we sent to the app fitting to what app sent to the mock server
@@ -45,7 +45,7 @@ describe("User needs to know what is the *age* for specific *name*", () => {
       assert: testFramework.createStep({
         name: StepName.assert,
         handler: async (valueObject) => {
-          const agifyRequests = valueObject.expressGetExecution({ endpointName: ApiEndpointName.getAge });
+          const agifyRequests = valueObject.expressGetExecutions({ endpointName: ApiEndpointName.getAge });
           const nameToAgeResponses = valueObject.axiosGetResponses({ endpointName: AppEndpointName.nameToAge });
           //? check is what we sent to the app fitting to what app sent to the mock server
           expect(agifyRequests.map((agifyRequest) => agifyRequest.request.query.name)).toStrictEqual(

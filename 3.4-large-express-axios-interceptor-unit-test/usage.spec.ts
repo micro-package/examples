@@ -29,7 +29,7 @@ describe("example 3.4", () => {
         name: StepName.stepAssert,
         handler: async (valueObject) => {
           server.close();
-          const executions = valueObject.expressGetExecution({
+          const executions = valueObject.expressGetExecutions({
             endpointName: MockEndpointName.googleMainPage,
             //? there is currently no way to read responded data
             //* do i need to know what is the responded data from external service when it is interceptor? ( when it is not it does not make sense since developer have full control on the result)
