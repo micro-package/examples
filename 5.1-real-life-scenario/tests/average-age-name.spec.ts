@@ -4,9 +4,9 @@ import { arrangeAgifyEndpoint, arrangeClearAgeNamePairTable } from "./framework/
 import { actAverageAgeForNameEndpoint, actNameToAgeBatchEndpoint } from "./framework/act";
 import { AppEndpointName } from "./framework/definitions";
 
-describe("feature/averageAgeForName", () => {
+describe("User needs to know what is the *average age* for specific name", () => {
   it(
-    "feature/averageAge/simpleAverageAgeForName",
+    "happy path",
     testFramework.createScenario({
       arrange: testFramework.composeSection(
         arrangeClearAgeNamePairTable(),

@@ -4,9 +4,9 @@ import { arrangeAgifyEndpoint, arrangeClearAgeNamePairTable } from "./framework/
 import { actNameToAgeBatchEndpoint, actRequestsForAgeEndpoint } from "./framework/act";
 import { AppEndpointName } from "./framework/definitions";
 
-describe("feature/RequestsForName", () => {
+describe("User needs to know how many times asked for *age* for specific *name*", () => {
   it(
-    "feature/averageAge/simpleRequestsForName",
+    "happy path",
     testFramework.createScenario({
       arrange: testFramework.composeSection(
         arrangeClearAgeNamePairTable(),
