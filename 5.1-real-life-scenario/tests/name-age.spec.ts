@@ -35,11 +35,9 @@ describe("User needs to know what is the *age* for specific *name*", () => {
       }),
     }),
   );
-});
-describe("error with second it in the same file", () => {
   it(
     //? for some reason when 2 `it` are in single file, there is a problem with missing defaultStates in storyteller plugin :(
-    "2User needs to know what is the *age* for specific *name*",
+    "path number 2",
     testFramework.createScenario({
       arrange: arrangeAgifyEndpoint({ age: mockedAgifyResponses }),
       act: actNameToAgeBatchEndpoint({ names: ["Tom", "Bob", "Anna", "Hannah", "Alice"] }),
