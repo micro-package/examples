@@ -27,7 +27,7 @@
     "@micro-package/container": "1.0.7",
     "@micro-package/express": "1.0.8",
     "@micro-package/storyteller": "1.0.12",
-    "@micro-package/typeorm": "1.0.10",
+    "@micro-package/typeorm": "^1.0.10",
     "@types/express": "4.17.13",
     "@types/jest": "29.2.2",
     "jest": "29.3.1",
