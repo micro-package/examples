@@ -26,6 +26,7 @@ describe("feature/name-age", () => {
           const nameToAgeResponses = valueObject.axiosGetResponses({ endpointName: AppEndpointName.nameToAge });
 
           //? check is what we sent to the app fitting to what app sent to the mock server
+          //? it may be a good idea to use unit tested encapsulated functions shared between application and tests for more advanced transformations
           expect(agifyRequests.map((agifyRequest) => agifyRequest.request.query.name)).toStrictEqual(
             nameToAgeResponses.map((nameToAgeResponse) => {
               const path = nameToAgeResponse.response.request.path;
