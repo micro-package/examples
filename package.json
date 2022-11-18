@@ -10,7 +10,8 @@
   "scripts": {
     "test": "./node_modules/.bin/jest --runInBand --config jest.config.json",
     "test-lint": "./node_modules/.bin/eslint -c ./eslint.json --ext .ts ./",
-    "test-types": "./node_modules/.bin/tsc --project ./tsconfig.json"
+    "test-types": "./node_modules/.bin/tsc --project ./tsconfig.json",
+    "prepare": "husky install"
   },
   "author": "Łukasz Klejszta",
   "license": "UNLICENSED",
