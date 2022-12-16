@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
-import { compose, storytellerHelper } from "@micro-package/storyteller";
 import { createValueObject, forgeValueObject } from "@micro-package/container/value-object";
+import { expressPlugin } from "@micro-package/express";
+import { compose, storytellerHelper, storytellerPlugin } from "@micro-package/storyteller";
 import HTTPMethod from "http-method-enum";
-import { storytellerPlugin } from "@micro-package/storyteller";
-import { expressPlugin } from "../../express/src";
 
 export enum ApiName {
   google = "google",
@@ -21,6 +20,12 @@ export enum StepName {
 }
 const port = 5545;
 export const mockDefinitions = [
+  {
+    apiName: ApiName.google,
+    endpointName: EndpointName.googleMainPage,
+    method: HTTPMethod.GET,
+    url: `http://localhost:${port}/main-page`,
+  } as const,
   {
     apiName: ApiName.google,
     endpointName: EndpointName.googleMainPage,
