@@ -6,7 +6,7 @@ import { externalApi } from "../../external-api";
 import { testFramework } from "../../framework";
 import { arrangeGoogleEndpoint, arrangeGoogleEndpointFactory } from "./arrange-google-endpoint";
 import { expect } from "@jest/globals";
-import { StorytellerHookName } from "@micro-package/storyteller/plugins/storyteller/types";
+import { StorytellerHookName } from "@micro-package/storyteller";
 describe("arrange google endpoint", () => {
   afterEach(async () => {
     await testFramework.runHooks({ name: StorytellerHookName.storytellerFinished });

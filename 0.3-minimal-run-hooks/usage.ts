@@ -1,7 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, no-console, no-unused-vars */
-import { compose, createValueObject, forgeValueObject, storytellerHelper } from "@micro-package/storyteller";
-import { storytellerPlugin } from "@micro-package/storyteller";
-import { StorytellerHookName } from "@micro-package/storyteller/plugins/storyteller/types";
+import {
+  compose,
+  createValueObject,
+  forgeValueObject,
+  storytellerHelper,
+  storytellerPlugin,
+  StorytellerHookName,
+} from "@micro-package/storyteller";
 
 enum StepName {
   helloWorld = "helloWorld",

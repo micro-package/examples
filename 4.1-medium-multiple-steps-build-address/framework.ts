@@ -6,8 +6,8 @@ import {
   expressPlugin,
   forgeValueObject,
   storytellerHelper,
+  storytellerPlugin,
 } from "@micro-package/storyteller";
-import { storytellerPlugin } from "@micro-package/storyteller";
 
 import { port, mockDefinitions, apiDefinitions } from "./definitions";
 import type { AxiosApiDefinition, ExpressMockDefinition } from "./definitions";

@@ -5,9 +5,9 @@ import {
   expressPlugin,
   forgeValueObject,
   storytellerHelper,
+  storytellerPlugin,
 } from "@micro-package/storyteller";
 import HTTPMethod from "http-method-enum";
-import { storytellerPlugin } from "@micro-package/storyteller";
 
 export enum ApiName {
   google = "google",

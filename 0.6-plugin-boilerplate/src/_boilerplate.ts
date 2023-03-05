@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import type { Plugin, PluginAction } from "@micro-package/storyteller/container/plugin";
-import { createPlugin } from "@micro-package/storyteller/container/plugin";
-import type { Status, ValueObject } from "@micro-package/storyteller/container/value-object";
+import type { Plugin, PluginAction, Status, ValueObject } from "@micro-package/storyteller";
+import { createPlugin } from "@micro-package/storyteller";
 
 export const ___________PLUG = "stepFunctions@1.0.0";
 

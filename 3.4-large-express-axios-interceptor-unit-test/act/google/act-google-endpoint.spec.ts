@@ -4,7 +4,7 @@ import { ApiEndpointName } from "../../definitions/api-definition";
 import { testFramework } from "../../framework";
 import { actGoogleEndpoint } from "./act-google-endpoint";
 import { expect } from "@jest/globals";
-import { StorytellerHookName } from "@micro-package/storyteller/plugins/storyteller/types";
+import { StorytellerHookName } from "@micro-package/storyteller";
 afterEach(async () => {
   await testFramework.runHooks({ name: StorytellerHookName.storytellerFinished });
 });

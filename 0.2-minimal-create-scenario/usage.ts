@@ -1,6 +1,11 @@
 /* eslint-disable no-console */
-import { compose, createValueObject, forgeValueObject, storytellerHelper } from "@micro-package/storyteller";
-import { storytellerPlugin } from "@micro-package/storyteller";
+import {
+  compose,
+  createValueObject,
+  forgeValueObject,
+  storytellerHelper,
+  storytellerPlugin,
+} from "@micro-package/storyteller";
 
 enum StepName {
   helloWorld = "helloWorld",

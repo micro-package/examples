@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
-import { compose, forgeValueObject, storytellerHelper } from "@micro-package/storyteller";
 import {
+  compose,
+  forgeValueObject,
+  storytellerHelper,
   storytellerPlugin,
   createValueObject,
   expressPlugin,

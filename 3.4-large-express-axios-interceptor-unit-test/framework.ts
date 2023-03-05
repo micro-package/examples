@@ -6,15 +6,15 @@ import {
   expressPlugin,
   forgeValueObject,
   storytellerHelper,
+  storytellerPlugin,
+  StorytellerHookName,
 } from "@micro-package/storyteller";
-import { storytellerPlugin } from "@micro-package/storyteller";
 
 import type { ExpressMockDefinition } from "./definitions/mock-definition";
 import type { AxiosApiDefinition } from "./definitions/api-definition";
 import type { StepName } from "./definitions/step";
 import { port, mockDefinitions } from "./definitions/mock-definition";
 import { apiDefinitions } from "./definitions/api-definition";
-import { StorytellerHookName } from "@micro-package/storyteller/plugins/storyteller/types";
 
 export const testFramework = compose(
   createValueObject(),
