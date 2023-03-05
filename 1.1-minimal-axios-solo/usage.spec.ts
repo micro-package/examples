@@ -5,7 +5,7 @@ import { expect } from "@jest/globals";
 describe("example 1.1", () => {
   it(
     "example 1.1",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: stepArrange,
       act: stepAct,
       assert: testFramework.createStep({

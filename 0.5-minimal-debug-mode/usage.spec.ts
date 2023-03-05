@@ -5,7 +5,7 @@ import { expect } from "@jest/globals";
 describe("example 0.5", () => {
   it(
     "example 0.5",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: testFramework.composeSection(arrangeAddMessage1, arrangeAddMessage2),
       act: actAddLowercaseMessagesCopy,
       assert: testFramework.createStep({

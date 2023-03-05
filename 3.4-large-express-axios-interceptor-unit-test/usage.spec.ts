@@ -21,7 +21,7 @@ describe("example 3.4", () => {
   setTimeout(server.close, 2500);
   it(
     "example 3.4",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: arrangeGoogleEndpoint(),
       act: actGoogleEndpoint({ requestDataField1: "some kind message" }),
       //* should it be splitted to several steps??

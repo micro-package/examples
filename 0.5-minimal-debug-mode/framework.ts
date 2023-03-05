@@ -1,5 +1,4 @@
-import { forgeValueObject, createValueObject } from "@micro-package/container/value-object";
-import { storytellerPlugin } from "@micro-package/storyteller";
+import { createValueObject, forgeValueObject, storytellerPlugin } from "@micro-package/storyteller";
 import { compose, storytellerHelper } from "@micro-package/storyteller";
 import { examplePlugin } from "./plugin";
 

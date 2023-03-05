@@ -6,7 +6,7 @@ import { expect } from "@jest/globals";
 describe("example 3.1", () => {
   it(
     "example 3.1",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: stepArrange(StatusCodes.INSUFFICIENT_SPACE_ON_RESOURCE),
       act: stepAct({ requestDataField1: "some kind message" }),
       assert: testFramework.createStep({

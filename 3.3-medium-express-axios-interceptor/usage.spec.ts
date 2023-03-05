@@ -25,7 +25,7 @@ describe("example 3.3", () => {
   setTimeout(server.close, 2500);
   it(
     "example 3.3",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: arrangeGoogleEndpoint(),
       act: actGoogleEndpoint({ requestDataField1: "some kind message" }),
       assert: testFramework.createStep({

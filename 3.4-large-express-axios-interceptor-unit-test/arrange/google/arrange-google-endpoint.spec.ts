@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 import type { RequestHandler } from "express-serve-static-core";
 import { StatusCodes } from "http-status-codes";
-import { StorytellerHookName } from "@micro-package/storyteller/types";
 import { MockEndpointName } from "../../definitions/mock-definition";
 import { externalApi } from "../../external-api";
 import { testFramework } from "../../framework";
 import { arrangeGoogleEndpoint, arrangeGoogleEndpointFactory } from "./arrange-google-endpoint";
 import { expect } from "@jest/globals";
+import { StorytellerHookName } from "@micro-package/storyteller/plugins/storyteller/types";
 describe("arrange google endpoint", () => {
   afterEach(async () => {
     await testFramework.runHooks({ name: StorytellerHookName.storytellerFinished });

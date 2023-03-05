@@ -13,7 +13,7 @@ const mockedAgifyResponses = [1, 2, 3, 4, 5];
 describe("feature/name-age", () => {
   it(
     "User needs to know what is the *age* for specific *name* / happy path",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: testFramework.composeSection(
         arrangeClearAgeNamePairTable(),
         arrangeAgifyEndpoint({ age: mockedAgifyResponses }),
@@ -44,7 +44,7 @@ describe("feature/name-age", () => {
 
   it(
     "User needs to know how many times asked for *age* for specific *name* / happy path",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: testFramework.composeSection(
         arrangeClearAgeNamePairTable(),
         arrangeAgifyEndpoint({ age: mockedAgifyResponses }),
@@ -68,7 +68,7 @@ describe("feature/name-age", () => {
 
   it(
     "User needs to know what is the *average age* for all people / happy path",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: testFramework.composeSection(
         arrangeClearAgeNamePairTable(),
         arrangeAgifyEndpoint({ age: mockedAgifyResponses }),
@@ -94,7 +94,7 @@ describe("feature/name-age", () => {
 
   it(
     "User needs to know what is the *average age* for specific name / happy path",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: testFramework.composeSection(
         arrangeClearAgeNamePairTable(),
         arrangeAgifyEndpoint({ age: mockedAgifyResponses }),

@@ -6,7 +6,7 @@ import { expect } from "@jest/globals";
 describe("4.1 multiple steps scenario", () => {
   it(
     "4.1 multiple steps scenario",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: testFramework.composeSection(arrangeAddNumber, arrangeAddCity, arrangeAddPostcode, arrangeAddStreet),
       act: testFramework.composeSection(actAppendNumber, actAppendCity, actAppendPostcode, actAppendStreet),
       assert: testFramework.createStep({

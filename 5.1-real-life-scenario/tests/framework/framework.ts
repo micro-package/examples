@@ -1,10 +1,12 @@
 /* eslint-disable no-console */
-import { compose, storytellerHelper } from "@micro-package/storyteller";
-import { createValueObject, forgeValueObject } from "@micro-package/container/value-object";
-import { storytellerPlugin } from "@micro-package/storyteller";
-import { expressPlugin } from "@micro-package/express";
-import { axiosPlugin } from "@micro-package/axios";
-import { typeormPlugin } from "@micro-package/typeorm";
+import { compose, forgeValueObject, storytellerHelper } from "@micro-package/storyteller";
+import {
+  storytellerPlugin,
+  createValueObject,
+  expressPlugin,
+  axiosPlugin,
+  typeormPlugin,
+} from "@micro-package/storyteller";
 import { mockDefinitions, apiDefinitions } from "./definitions";
 import type { ExpressMockDefinition, AxiosApiDefinition } from "./definitions";
 import { env } from "../../config";

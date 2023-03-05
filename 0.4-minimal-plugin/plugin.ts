@@ -1,7 +1,7 @@
-import type { HookDefinition } from "@micro-package/container/hook";
-import type { Plugin, PluginAction } from "@micro-package/container/plugin";
-import { createPlugin } from "@micro-package/container/plugin";
-import type { Status, ValueObject } from "@micro-package/container/value-object";
+import type { HookDefinition } from "@micro-package/storyteller/container/hook";
+import type { Plugin, PluginAction } from "@micro-package/storyteller/container/plugin";
+import { createPlugin } from "@micro-package/storyteller/container/plugin";
+import type { Status, ValueObject } from "@micro-package/storyteller/container/value-object";
 
 export const EXAMPLE_PLUG = "example@1.0.0";
 

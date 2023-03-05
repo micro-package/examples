@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import { StatusCodes } from "http-status-codes";
-import { StorytellerHookName } from "@micro-package/storyteller/types";
 import { ApiEndpointName } from "../../definitions/api-definition";
 import { testFramework } from "../../framework";
 import { actGoogleEndpoint } from "./act-google-endpoint";
 import { expect } from "@jest/globals";
+import { StorytellerHookName } from "@micro-package/storyteller/plugins/storyteller/types";
 afterEach(async () => {
   await testFramework.runHooks({ name: StorytellerHookName.storytellerFinished });
 });

@@ -23,7 +23,7 @@ describe("example 3.2", () => {
   setTimeout(server.close, 2500);
   it(
     "example 3.2",
-    testFramework.createScenario({
+    testFramework.createStory({
       arrange: stepArrange(),
       act: stepAct({ requestDataField1: "some kind message" }),
       assert: testFramework.createStep({
