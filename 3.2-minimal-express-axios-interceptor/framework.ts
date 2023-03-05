@@ -3,8 +3,8 @@ import { compose, storytellerHelper } from "@micro-package/storyteller";
 import { createValueObject, forgeValueObject } from "@micro-package/container/value-object";
 import HTTPMethod from "http-method-enum";
 import { storytellerPlugin } from "@micro-package/storyteller";
-import { expressPlugin } from "../../express/src";
-import { axiosPlugin } from "../../axios/src";
+import { expressPlugin } from "@micro-package/express";
+import { axiosPlugin } from "@micro-package/axios";
 
 export enum ApiName {
   google = "google",
