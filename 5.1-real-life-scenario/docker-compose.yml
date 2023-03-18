@@ -17,6 +17,41 @@ services:
       - 8088:8088
     networks:
       - app
-
+  app:
+    image: app:local
+    container_name: app
+    hostname: app
+    command: npm run start
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    env_file:
+      - .env.dist
+    networks:
+      - app
+    depends_on:
+      - postgres
+    links:
+      - postgres
+  js:
+    image: app:local
+    container_name: js
+    hostname: js
+    volumes:
+      - .:/app
+    ports:
+      - 5545:5545
+    env_file:
+      - .env.dist
+    networks:
+      - app
+    depends_on:
+      - app
+    links:
+      - app
 networks:
   app:

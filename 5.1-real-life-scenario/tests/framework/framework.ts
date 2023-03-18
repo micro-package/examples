@@ -33,14 +33,14 @@ export const testFramework = compose(
   createValueObject(),
   expressPlugin<ExpressMockDefinition>({ port: Number(env.MOCK_SERVER_PORT), mockDefinitions }),
   axiosPlugin<AxiosApiDefinition>({ apiDefinitions }),
-  storytellerPlugin<StepName>({ websocket: true }),
+  storytellerPlugin<StepName>({ websocket: false }),
   typeormPlugin({
     dataSources: [
       {
         name: DataSourceName.postgres,
         dataSource: new DataSource({
           type: "postgres",
-          host: "localhost",
+          host: "postgres",
           database: env.POSTGRES_DB,
           password: env.POSTGRES_PASSWORD,
           username: env.POSTGRES_USERNAME,

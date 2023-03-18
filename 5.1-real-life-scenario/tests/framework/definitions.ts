@@ -39,25 +39,25 @@ export const apiDefinitions = [
     endpointName: AppEndpointName.requestsForAge,
     apiName: ApiName.app,
     method: HTTPMethod.GET,
-    url: "http://localhost:3000/requests-for-age",
+    url: "http://app:3000/requests-for-age",
   } as const,
   {
     endpointName: AppEndpointName.nameToAge,
     apiName: ApiName.app,
     method: HTTPMethod.GET,
-    url: "http://localhost:3000/name-to-age",
+    url: "http://app:3000/name-to-age",
   } as const,
   {
     endpointName: AppEndpointName.averageAge,
     apiName: ApiName.app,
     method: HTTPMethod.GET,
-    url: "http://localhost:3000/average-age",
+    url: "http://app:3000/average-age",
   } as const,
   {
     endpointName: AppEndpointName.averageAgeForName,
     apiName: ApiName.app,
     method: HTTPMethod.GET,
-    url: "http://localhost:3000/average-age",
+    url: "http://app:3000/average-age",
   } as const,
 ];
 

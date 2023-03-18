@@ -17,7 +17,7 @@ export class AgeNamePair {
 export const repository = async () => {
   const dataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
+    host: "postgres",
     database: env.POSTGRES_DB,
     password: env.POSTGRES_PASSWORD,
     username: env.POSTGRES_USERNAME,

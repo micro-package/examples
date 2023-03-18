@@ -10,6 +10,11 @@ import {
 import { ApiEndpointName, AppEndpointName } from "./framework/definitions";
 
 const mockedAgifyResponses = [1, 2, 3, 4, 5];
+jest.setTimeout(1000 * 30);
+beforeAll(async () => {
+  //TODO replace timeout with API discovery (maybe inside the framework?)
+  await new Promise((resolve) => setTimeout(resolve, 1000 * 15));
+});
 describe("feature/name-age", () => {
   it(
     "User needs to know what is the *age* for specific *name* / happy path",

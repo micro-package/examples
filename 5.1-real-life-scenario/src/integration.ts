@@ -2,7 +2,7 @@ import axios from "axios";
 import { StatusCodes } from "http-status-codes";
 import { env } from "../config";
 
-const url = env.APP_ENV === "test" ? `http://localhost:${env.MOCK_SERVER_PORT}/agify` : "https://api.agify.io";
+const url = env.APP_ENV === "test" ? `http://js:${env.MOCK_SERVER_PORT}/agify` : "https://api.agify.io";
 
 export const agify = async (payload: { name: string }) => {
   const result = await axios({

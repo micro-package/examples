@@ -1,11 +1,11 @@
-import dotenv from "dotenv";
+import { config } from "dotenv";
 
-const config = dotenv.config({
+const appConfig = config({
   path: `${__dirname}/.env`,
 });
 
-if (config.parsed === undefined) {
+if (appConfig.parsed === undefined) {
   throw Error("Test has missing env variables");
 }
 
-export const env = config.parsed;
+export const env = appConfig.parsed;
