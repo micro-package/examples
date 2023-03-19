@@ -9,7 +9,7 @@
   "scripts": {
     "start": "./node_modules/.bin/ts-node src/index.ts",
     "test": "./node_modules/.bin/jest --runInBand --config jest.config.json",
-    "d-test": "docker-compose --env-file=.env run --service-ports $npm_config_args js npm run test"
+    "d-test": "docker-compose --env-file=.env run --service-ports $npm_config_args js sh -c './docker/wait-for app:3000 -- npm run test'"
   },
   "author": "Łukasz Klejszta",
   "license": "UNLICENSED",
