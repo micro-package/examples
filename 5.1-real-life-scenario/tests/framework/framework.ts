@@ -33,7 +33,7 @@ export const testFramework = compose(
   createValueObject(),
   expressPlugin<ExpressMockDefinition>({ port: Number(env.MOCK_SERVER_PORT), mockDefinitions }),
   axiosPlugin<AxiosApiDefinition>({ apiDefinitions }),
-  storytellerPlugin<StepName>({ websocketUrl: env.STORYTELLER_WEBSOCKET_URL }),
+  storytellerPlugin<StepName>({}),
   typeormPlugin({
     dataSources: [
       {

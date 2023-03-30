@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { testFramework, StepName } from "./framework/framework";
+import { testFramework, StepName, DataSourceName } from "./framework/framework";
 import { arrangeAgifyEndpoint, arrangeClearAgeNamePairTable } from "./framework/arrange";
 import {
   actAverageAgeEndpoint,
@@ -8,6 +8,7 @@ import {
   actRequestsForAgeEndpoint,
 } from "./framework/act";
 import { ApiEndpointName, AppEndpointName } from "./framework/definitions";
+import { AgeNamePair } from "../src/repository";
 
 const mockedAgifyResponses = [1, 2, 3, 4, 5];
 jest.setTimeout(1000 * 30);
@@ -25,6 +26,10 @@ describe("feature/name-age", () => {
         handler: async (valueObject) => {
           const agifyRequests = valueObject.expressGetExecutions({ endpointName: ApiEndpointName.getAge });
           const nameToAgeResponses = valueObject.axiosGetResponses({ endpointName: AppEndpointName.nameToAge });
+          const storedAgeNamePair = await valueObject
+            .typeormGetManager({ name: DataSourceName.postgres })
+            .getRepository(AgeNamePair)
+            .find();
 
           //? check is what we sent to the app fitting to what app sent to the mock server
           //? it may be a good idea to use unit tested encapsulated functions shared between application and tests for more advanced transformations
@@ -34,9 +39,12 @@ describe("feature/name-age", () => {
               return path.substring(path.lastIndexOf("/") + 1);
             }),
           );
+          expect(storedAgeNamePair.map((nameToAgeResponse) => nameToAgeResponse.age)).toStrictEqual(
+            mockedAgifyResponses,
+          );
           //? check is what mock server returned fitting to what app returned
           expect(mockedAgifyResponses).toStrictEqual(
-            nameToAgeResponses.map((nameToAgeResponse) => nameToAgeResponse.response.data.age),
+            nameToAgeResponses.map((nameToAgeResponse) => nameToAgeResponse.response.data.age + 1),
           );
         },
       }),

@@ -2,7 +2,7 @@ ARG IMAGE=node:16.16.0-alpine
 FROM $IMAGE as real-life-scenario
 
 WORKDIR /app
-RUN apk add --no-cache bash curl git py-pip make && \
+RUN apk add --no-cache bash curl git py-pip make netcat-openbsd && \
   curl -sfL https://install.goreleaser.com/github.com/tj/node-prune.sh | sh && \
   npm cache clean --force
 
