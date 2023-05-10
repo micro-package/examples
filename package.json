@@ -16,7 +16,7 @@
   "author": "Łukasz Klejszta",
   "license": "UNLICENSED",
   "dependencies": {
-    "@micro-package/storyteller": "1.1.1",
+    "@micro-package/storyteller": "1.1.5",
     "@ngneat/falso": "^6.4.0",
     "axios": "0.27.2",
     "http-method-enum": "^1.0.0",
